@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #151414;
+        }
+
+        header {
+            background: #011446;
+            color: #7abbe3;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #16bb1e;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background: rgb(204, 240, 106);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(170, 183, 181, 0.1);
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .menu-item img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin: 10px 0 5px;
+        }
+
+        form input, form select {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #d63e3e;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #131313;
+            color: #2121c1;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: #969b9c;
+        }
+
+        .gallery-item {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .gallery-item img {
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        #map {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            background: #908d8d;
+            color: #090808;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Restaurant</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-item">
+                <img src="https://i.pinimg.com/564x/3b/c7/30/3bc73035327a625895dc42698e1596f6.jpg" alt="Roast" />
+                <h3>Crab Ghee Roast</h3>
+                <p>    It is made by cooking crab in a flavorful blend of spices, including ghee (clarified butter) and tangy and aromatic ingredients.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://myfoodbook.com.au/sites/default/files/styles/schema_img/public/recipe_photo/P5016359a_11.jpg" alt="Prawn" />
+                <h3>Garlic Prawn</h3>
+                <p>This is a spectacular way to cook prawns that's been a family favourite for as long as I can remember.</p>
+            </div>
+            <div class="menu-item">
+                <img src="https://www.recipesaresimple.com/wp-content/uploads/2021/09/lucknowi-chicken-biryani-recipe.jpeg" alt="Biriyani" />
+                <h3>Chicken Biriyani</h3>
+                <p>Biryani is a celebratory rice and meat dish cherished in the Indian sub-continent.</p>
+            </div>
+        </section>
+
+        <section id="reservation">
+            <h2>Make a Reservation</h2>
+            <form id="reservation-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+                
+                <label for="time">Time:</label>
+                <input type="time" id="time" required>
+                
+                <label for="people">Number of People:</label>
+                <input type="number" id="people" required min="1">
+                
+                <button type="submit">Reserve Now</button>
+            </form>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-item">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/2d/2f/94/karavalli-garden.jpg?w=1200&h=-1&s=1" alt="Restaurant Ambiance" />
+            </div>
+            <div class="gallery-item">
+                <img src="https://media.cntraveler.com/photos/652d4cddbb93c1559f6e1829/master/w_1600%2Cc_limit/o%2520pedro.JPG" alt="Food Presentation" />
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Location: 66 Residency Rd The Gateway Hotel, Bengaluru, 560025</p>
+            <p>Email: taj@restaurant.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Karavalli an iconic restaurant located at Vivanta Bengaluru Residency Road. Since inception in 1990, Karavalli has grown to be an institution when it comes to South west coast flavours. Modelled on a traditional Mangalorean bungalow, and surrounded by lush tamarind trees, the restaurant is inspired by the architecture of coastal South India. Ingredients from the coast, such as cloves, cinnamon, pepper, home grown chillies and only the freshest vegetables and finest meats make it to the menu.</p>
+    </footer>
+
+    <script>
+        document.getElementById('reservation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Reservation made successfully!');
+            this.reset(); // Reset the form after submission
+        });
+
+        function initMap() {
+            // Sample location for the restaurant
+            const restaurantLocation = { lat: 40.712776, lng: -74.005974 }; // New York, NY
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: restaurantLocation,
+            });
+            const marker = new google.maps.Marker({
+                position: restaurantLocation,
+                map: map,
+            });
+        }
+    </script>
+
+    <!-- Google Maps API -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+        
+    </script>
+    
+</body>
+</html>

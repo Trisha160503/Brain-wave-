@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body { color: #f0eaea; background-color: #12d6e8; line-height: 1.6; }
+
+        /* Header */
+        .header { background: #025437; color: rgb(246, 246, 247); padding: 2rem; text-align: center; }
+        .header h1 { font-size: 2rem; }
+        .header p { font-size: 1.1rem; }
+
+        /* Job Listings */
+        .jobs { padding: 2rem; background-color: #909fa1; text-align: center; }
+        .jobs h2 { font-size: 1.8rem; color: #170303; margin-bottom: 1rem; }
+        .job-listings { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+        .job-item { background: #0d0d0d; width: 100%; max-width: 300px; padding: 1rem; border-radius: 5px; border: 1px solid #ddd; text-align: left; transition: transform 0.3s; }
+        .job-item:hover { transform: scale(1.05); }
+        .job-item h3 { color: #f3f1f1; font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .job-item p { color: #9a9999; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .job-item .apply-btn { padding: 0.5rem 1rem; background: #007BFF; color: rgb(15, 14, 14); text-align: center; border-radius: 5px; text-decoration: none; display: inline-block; }
+
+        /* Featured Companies */
+        .companies { padding: 2rem; background-color: #909fa1; text-align: center; }
+        .companies h2 { color: #0d0d0d; margin-bottom: 1rem; }
+        .company-list { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+        .company-item { background: #1a1613; width: 100%; max-width: 200px; padding: 1rem; border: 1px solid #ddd; border-radius: 5px; text-align: center; }
+        .company-item img { width: 100px; height: auto; }
+
+        /* Contact Section */
+        .contact { padding: 2rem; background-color: #909fa1; text-align: center; }
+        .contact h2 { color: #0d0e0e; margin-bottom: 1rem; }
+        .contact form { max-width: 500px; margin: auto; }
+        .contact input, .contact textarea { width: 100%; padding: 1rem; margin: 0.5rem 0; border: 1px solid #ddd; border-radius: 5px; }
+        .contact button { padding: 0.8rem 1.5rem; background: #007BFF; color: rgb(11, 11, 11); border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+        .contact button:hover { background: #0056b3; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .job-listings, .company-list { flex-direction: column; align-items: center; }
+            .job-item, .company-item { width: 90%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Find Your Dream Job</h1>
+        <p>Browse jobs, connect with top companies, and start your career journey</p>
+    </header>
+
+    <!-- Job Listings -->
+    <section class="jobs">
+        <h2>Available Jobs</h2>
+        <div class="job-listings">
+            <div class="job-item">
+                <h3>Software Engineer</h3>
+                <p>WIPRO</p>
+                <p>Location: CHENNAI</p>
+                <p>Salary: $80,000 - $100,000</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="job-item">
+                <h3>Project Manager</h3>
+                <p>INFOSYS</p>
+                <p>Location: BANGALORE</p>
+                <p>Salary: $70,000 - $90,000</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="job-item">
+                <h3>Data Analyst</h3>
+                <p>GOOGLE</p>
+                <p>Location: HYDERABAD</p>
+                <p>Salary: $60,000 - $80,000</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <!-- Add more job items as needed -->
+        </div>
+    </section>
+
+    <!-- Featured Companies -->
+    <section class="companies">
+        <h2>Featured Companies</h2>
+        <div class="company-list">
+            <div class="company-item">
+                <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202304/wipro_0-sixteen_nine.jpg?size=948:533" alt="Company 1">
+                <p>WIPRO</p>
+            </div>
+            <div class="company-item">
+                <img src="https://bloximages.chicago2.vip.townnews.com/napavalleyregister.com/content/tncms/assets/v3/editorial/8/ee/8eeedf0c-4d7e-582f-a87e-763f3555e0a2/5d02743ae2024.image.jpg?resize=1200%2C800" alt="Company 2">
+                <p>GOOGLE</p>
+            </div>
+            <div class="company-item">
+                <img src="https://www.businessinsider.in/photo/76980089/infosys-company-profit-is-down-4-8-and-revenue-has-dipped-by-2-in-q1fy21.jpg?imgsize=1280656" alt="Company 3">
+                <p>INFOSYS</p>
+            </div>
+            <!-- Add more company items as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</body>
+</html>
